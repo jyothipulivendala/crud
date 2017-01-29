@@ -1,0 +1,35 @@
+# dataconnection.dataconnection_controller_display:
+#   path: '/mydata'
+#   defaults:
+#     _controller: '\Drupal\mydata\Controller\MydataController::display'
+#     _title: 'display'
+#   requirements:
+#     _permission: 'access content'
+
+dataconnection.data_form_form:
+  path: '/dataconnection/form'
+  defaults:
+    _form: '\Drupal\dataconnection\Form\DataForm'
+    _title: 'dataForm'
+  requirements:
+    _access: 'TRUE'
+  
+
+dataconnection.display_data_display:
+  path: '/dataconnection/table'
+  defaults:
+    _controller: '\Drupal\dataconnection\Controller\DisplayData::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+  dataconnection.delete_data_form:
+  path: '/dataconnection/form/delete/{cid}'
+  defaults:
+    _form: '\Drupal\dataconnection\Form\DeleteData'
+    _title: 'deletedataForm'
+  requirements:
+    _access: 'TRUE'
+  
+
+ 
